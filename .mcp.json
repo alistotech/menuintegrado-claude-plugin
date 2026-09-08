@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "menu-integrado": {
+      "type": "http",
+      "url": "https://www.menuintegrado.com.br/mcp"
+    }
+  }
+}
