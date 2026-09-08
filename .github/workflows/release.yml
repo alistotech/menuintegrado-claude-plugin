@@ -1,0 +1,45 @@
+name: Plugin release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Read the version
+        id: metadata
+        shell: bash
+        run: |
+          version="$(jq -r '.version' .claude-plugin/plugin.json)"
+
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=v${version}" >> "$GITHUB_OUTPUT"
+
+      - name: Create the plugin ZIP
+        env:
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          mkdir -p dist
+          zip -r "dist/menu-integrado-${VERSION}.zip" . \
+            -x ".git/*" ".github/*" "dist/*" "releases/*"
+
+      - name: Publish to GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.metadata.outputs.tag }}
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          gh release create "$TAG" "dist/menu-integrado-${VERSION}.zip" \
+            --title "Menu Integrado ${VERSION}" \
+            --generate-notes
