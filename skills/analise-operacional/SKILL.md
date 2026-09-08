@@ -1,6 +1,6 @@
 ---
 name: analise-operacional
-description: Analise métricas, canais, iFood, repasses e documentos fiscais de unidades do Menu Integrado, incluindo comparações e investigação de quedas.
+description: Analise métricas, canais, estoque, iFood, repasses e documentos fiscais de unidades do Menu Integrado, incluindo comparações, alertas de estoque e investigação de quedas.
 ---
 
 # Análise operacional
@@ -24,6 +24,7 @@ Não descubra a unidade chamando métricas em todas as unidades. Não trate a pr
 - Use `get_order_metrics_grouped` para evolução por dia, semana, mês, trimestre ou ano, podendo também agrupar por dimensões disponíveis.
 - Use `sales_by_channel` para comparar canais de venda.
 - Use `order_status_summary` para o resumo atual dos pedidos por status.
+- Use `get_stock_alerts` para identificar produtos e insumos sem estoque ou abaixo do estoque mínimo cadastrado. Não use esta tool para inferir consumo ou estimar uma data de reposição.
 - Use `get_ifood_metrics` para movimentações financeiras conciliadas e pagamentos do iFood. Para pedidos e descontos do iFood, use também `get_order_metrics`.
 - Use `get_repass_metrics` para eventos que impactam o repasse do iFood.
 - Use `get_fiscal_metrics` para documentos fiscais e sua relação com pedidos.
