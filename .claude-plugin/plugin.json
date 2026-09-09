@@ -1,8 +1,8 @@
 {
   "name": "menu-integrado",
   "displayName": "Menu Integrado",
-  "description": "Análises operacionais, estoque e produtos do Menu Integrado",
-  "version": "1.0.2",
+  "description": "Análises operacionais, clientes, estoque e produtos do Menu Integrado",
+  "version": "1.0.3",
   "author": {
     "name": "Menu Integrado"
   },
