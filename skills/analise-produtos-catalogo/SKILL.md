@@ -26,6 +26,15 @@ Use as tools MCP para consultar o catálogo e o desempenho dos produtos da unida
 
 Não chame detalhes, variações ou ficha técnica para todos os produtos quando o usuário pediu apenas uma listagem ou uma busca. Não faça uma chamada de histórico para cada produto quando uma métrica agregada resolver a pergunta.
 
+## Atualização da imagem do produto
+
+- Atualize a imagem somente quando o usuário pedir explicitamente para gerar ou substituir a imagem do produto.
+- Identifique a unidade e o produto com `list_menu_products`; se houver mais de uma correspondência, peça ao usuário para escolher antes de alterar o cadastro.
+- Gere a imagem com uma ferramenta de geração disponível no cliente. Se não houver uma ferramenta disponível, peça ao usuário que forneça a imagem; não diga que gerou uma imagem.
+- Envie a imagem como data URL Base64 PNG, JPEG ou WebP, com menos de 5 MB, para `update_product_image`.
+- A tool só aparece quando a conexão tem o escopo `mcp:write`. Se não estiver disponível, explique que é preciso autorizar novamente a conexão com permissão para alterar imagens.
+- Confirme a atualização somente depois de receber sucesso da tool.
+
 ## Análise e limites
 
 - Para saber quanto um produto vendeu, quando vendeu ou como evoluiu, use `get_product_sales_history` com uma unidade, um produto e um período.
