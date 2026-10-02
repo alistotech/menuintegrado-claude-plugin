@@ -4,7 +4,7 @@ Plugin do Claude para análise operacional, vendas, clientes, estoque, iFood, ca
 
 ## Instalação manual por ZIP
 
-1. Baixe `releases/menu-integrado-1.3.0.zip`.
+1. Baixe `releases/menu-integrado-1.3.1.zip`.
 2. No Claude, abra `Customize > Plugins`.
 3. Escolha a opção para adicionar ou fazer upload de um plugin personalizado.
 4. Depois da instalação, ative o plugin e conecte o servidor MCP.
