@@ -1,8 +1,8 @@
 {
   "name": "menu-integrado",
   "displayName": "Menu Integrado",
-  "description": "Análises operacionais, clientes, estoque, produtos e imagens do Menu Integrado",
-  "version": "1.1.0",
+  "description": "Análises operacionais, clientes, estoque, produtos, imagens e posts no Instagram do Menu Integrado",
+  "version": "1.2.0",
   "author": {
     "name": "Menu Integrado"
   },
