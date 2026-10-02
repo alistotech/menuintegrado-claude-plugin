@@ -1,10 +1,10 @@
 # Menu Integrado para Claude
 
-Plugin do Claude para análise operacional, vendas, clientes, estoque, iFood, catálogo, histórico de produtos e posts no Instagram do Menu Integrado.
+Plugin do Claude para análise operacional, vendas, clientes, estoque, iFood, catálogo, histórico de produtos, posts no Instagram e anúncios do Menu Integrado.
 
 ## Instalação manual por ZIP
 
-1. Baixe `releases/menu-integrado-1.2.0.zip`.
+1. Baixe `releases/menu-integrado-1.3.0.zip`.
 2. No Claude, abra `Customize > Plugins`.
 3. Escolha a opção para adicionar ou fazer upload de um plugin personalizado.
 4. Depois da instalação, ative o plugin e conecte o servidor MCP.
