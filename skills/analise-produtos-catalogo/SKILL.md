@@ -1,6 +1,6 @@
 ---
 name: analise-produtos-catalogo
-description: Analise produtos e catálogo do Menu Integrado: cadastro, variações, fichas técnicas, métricas e histórico de vendas.
+description: Analise produtos e catálogo do Menu Integrado: cadastro, variações, fichas técnicas, métricas e histórico de vendas, incluindo atualizações solicitadas.
 ---
 
 # Análise de produtos e catálogo
@@ -18,6 +18,7 @@ Use as tools MCP para consultar o catálogo e o desempenho dos produtos da unida
 ## Escolha das tools
 
 - Use `list_menu_products` para listar ou pesquisar produtos do catálogo.
+- Use `list_menu_categories` somente quando precisar escolher uma categoria para atualizar um produto.
 - Use `get_product_details` para informações cadastrais do produto.
 - Use `get_product_variations` quando o usuário perguntar por variações e seus itens.
 - Use `get_product_recipe` quando o usuário pedir a ficha técnica, insumos ou composição.
@@ -26,13 +27,13 @@ Use as tools MCP para consultar o catálogo e o desempenho dos produtos da unida
 
 Não chame detalhes, variações ou ficha técnica para todos os produtos quando o usuário pediu apenas uma listagem ou uma busca. Não faça uma chamada de histórico para cada produto quando uma métrica agregada resolver a pergunta.
 
-## Atualização da imagem do produto
+## Atualização do produto
 
-- Atualize a imagem somente quando o usuário pedir explicitamente para gerar ou substituir a imagem do produto.
-- Identifique a unidade e o produto com `list_menu_products`; se houver mais de uma correspondência, peça ao usuário para escolher antes de alterar o cadastro.
-- Gere a imagem com uma ferramenta de geração disponível no cliente. Se não houver uma ferramenta disponível, peça ao usuário que forneça a imagem; não diga que gerou uma imagem.
-- Envie a imagem como data URL Base64 PNG, JPEG ou WebP, com menos de 5 MB, para `update_product_image`.
-- A tool só aparece quando a conexão tem o escopo `mcp:write`. Se não estiver disponível, explique que é preciso autorizar novamente a conexão com permissão para alterar imagens.
+- Atualize o cadastro somente quando o usuário pedir explicitamente. Altere apenas os campos solicitados; não infira mudanças em preços ou disponibilidade.
+- Identifique a unidade e o produto com `list_menu_products`; se houver mais de uma correspondência, peça ao usuário para escolher antes de alterar o cadastro. Se for mudar a categoria, consulte `list_menu_categories` e use um slug retornado para a mesma unidade.
+- Se o usuário pedir uma imagem, gere-a com uma ferramenta disponível no cliente. Se não houver uma ferramenta, peça ao usuário que forneça a imagem; não diga que gerou uma imagem.
+- Chame `update_product` com a unidade, o `product_slug` e somente os campos a alterar. Para mudar a categoria, consulte `list_menu_categories` e use o `category_slug` retornado para a mesma unidade. A tool também aceita canais de venda (`platform`, `marketplace`, `establishment`, `internal`), nome, descrição, preços, disponibilidade, informações dietéticas e imagem. Envie imagem como data URL Base64 PNG, JPEG ou WebP, com menos de 5 MB.
+- A tool só aparece quando a conexão tem o escopo `mcp:write`. Se não estiver disponível, explique que é preciso autorizar novamente a conexão com permissão para atualizar produtos.
 - Confirme a atualização somente depois de receber sucesso da tool.
 
 ## Análise e limites
