@@ -1,6 +1,6 @@
 ---
 name: analise-operacional
-description: Analise métricas, canais, clientes, estoque, iFood, repasses e documentos fiscais de unidades do Menu Integrado, incluindo retenção de clientes, comparações, alertas de estoque e investigação de quedas.
+description: Analise métricas, canais, clientes, estoque, iFood, repasses e documentos fiscais de unidades do Menu Integrado, incluindo retenção de clientes, avaliações, comparações, alertas de estoque e investigação de quedas.
 ---
 
 # Análise operacional
@@ -26,12 +26,13 @@ Não descubra a unidade chamando métricas em todas as unidades. Não trate a pr
 - Use `order_status_summary` para o resumo atual dos pedidos por status.
 - Use `get_stock_alerts` para identificar produtos e insumos sem estoque ou abaixo do estoque mínimo cadastrado. Não use esta tool para inferir consumo ou estimar uma data de reposição.
 - Use `get_customer_retention_metrics` para medir clientes únicos, novos e recorrentes em um período. Não use esta tool para listar clientes ou obter dados pessoais.
+- Use `get_review_metrics` para consultar o volume e a média das avaliações, a distribuição das notas, a evolução e até 100 avaliações recentes com comentários. Os resultados não incluem dados de identificação do cliente; sintetize temas recorrentes sem atribuir falas a pessoas.
 - Use `get_ifood_metrics` para movimentações financeiras conciliadas e pagamentos do iFood. Para pedidos e descontos do iFood, use também `get_order_metrics`.
 - Use `get_repass_metrics` para eventos que impactam o repasse do iFood.
 - Use `get_fiscal_metrics` para documentos fiscais e sua relação com pedidos.
 - Use `get_products_metrics` quando a pergunta envolver o desempenho agregado dos produtos.
 
-Consulte somente as tools necessárias. Para investigar uma queda, comece pela métrica geral e aprofunde em canais, produtos, cancelamentos, iFood, repasses ou fiscal conforme a evidência disponível. Não chame todas as tools por padrão.
+Consulte somente as tools necessárias. Para investigar uma queda, comece pela métrica geral e aprofunde em canais, produtos, avaliações, cancelamentos, iFood, repasses ou fiscal conforme a evidência disponível. Não chame todas as tools por padrão.
 
 ## Períodos e resposta
 
