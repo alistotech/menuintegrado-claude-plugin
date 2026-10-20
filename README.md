@@ -2,9 +2,17 @@
 
 Plugin do Claude para análise operacional, vendas, clientes, avaliações, estoque, iFood, catálogo, histórico de produtos, posts no Instagram e anúncios do Menu Integrado.
 
+## Instalação pela biblioteca da organização
+
+O plugin está publicado na biblioteca da organização no Claude e disponível para instalação pelos seus membros.
+
+1. Acesse o [plugin Menu Integrado no Claude](https://claude.ai/customize/plugins/id/plugin_014ZKLVEGPZCKhfzSWqvftqc) com sua conta da organização.
+2. Instale o plugin e conecte o servidor MCP.
+3. Autorize sua conta do Menu Integrado pelo OAuth.
+
 ## Instalação manual por ZIP
 
-1. Baixe `releases/menu-integrado-1.6.0.zip`.
+1. Baixe o ZIP `menu-integrado-<versão>.zip` nos arquivos da [release desejada no GitHub](https://github.com/alistotech/menuintegrado-claude-plugin-/releases).
 2. No Claude, abra `Customize > Plugins`.
 3. Escolha a opção para adicionar ou fazer upload de um plugin personalizado.
 4. Depois da instalação, ative o plugin e conecte o servidor MCP.
@@ -15,8 +23,6 @@ Plugin do Claude para análise operacional, vendas, clientes, avaliações, esto
 ```text
 claude --plugin-dir /caminho/para/menuintegrado-claude-plugin
 ```
-
-Quando o plugin for aprovado no diretório oficial do Claude, os clientes poderão encontrá-lo e instalá-lo por lá. Até isso acontecer, use o ZIP para instalação manual.
 
 Cada cliente deve autenticar sua própria conta. O plugin não concede acesso adicional às lojas.
 
