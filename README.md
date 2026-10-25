@@ -1,6 +1,6 @@
 # Menu Integrado para Claude
 
-Plugin do Claude para análise operacional, vendas, clientes, avaliações, estoque, iFood, catálogo, histórico de produtos, posts no Instagram e anúncios do Menu Integrado.
+Plugin do Claude para análise operacional, vendas, clientes, avaliações, estoque, iFood, catálogo, histórico de produtos, mensagens Liquid, posts no Instagram e anúncios do Menu Integrado.
 
 ## Instalação pela biblioteca da organização
 
