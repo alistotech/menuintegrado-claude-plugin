@@ -1,8 +1,8 @@
 {
   "name": "menu-integrado",
   "displayName": "Menu Integrado",
-  "description": "Análises operacionais, clientes, avaliações, estoque, atualização de produtos, categorias e canais de venda, mensagens Liquid, posts no Instagram e campanhas de anúncios do Menu Integrado",
-  "version": "2.2.0",
+  "description": "Análises operacionais, clientes, avaliações, estoque, atualização de produtos, categorias e canais de venda, mensagens e templates de impressão Liquid, posts no Instagram e campanhas de anúncios do Menu Integrado",
+  "version": "2.3.0",
   "author": {
     "name": "Menu Integrado"
   },
